@@ -1,0 +1,269 @@
+header {
+    background-color: #1f1f1f; /* Fundo mais escuro */
+    color: #e0e0e0; /* Texto claro */
+    padding: 20px 0;
+    position: relative; /* Posicionamento relativo para a logo e navegação */
+    width: 100%; /* Cabeçalho ocupa 100% da largura */
+}
+
+/* Logo no canto esquerdo */
+header .logo {
+    position: absolute; /* Para posicionar a logo de forma fixa */
+    left: 20px; /* Deixa a logo 20px do lado esquerdo */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste para centralizar completamente */
+}
+
+header .logo img {
+    max-height: 100px; /* Tamanho máximo da logo */
+}
+
+/* Navegação no canto direito */
+header nav {
+    position: absolute; /* Posicionamento absoluto para a navegação */
+    right: 20px; /* Deixa a navegação 20px da borda direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste para centralizar completamente */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens em linha */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFA500;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #121212; /* Cor de fundo escura */
+    color: #e0e0e0; /* Texto claro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.hero {
+    text-align: center;
+    background-color: #1e1e1e;
+    filter: contrast(75%)  saturate(180%);
+    padding: 200px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    background-image:url("img/batatas-zanetti.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.hero h1 {
+    color: #000000;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+    color: #ffffff;
+}
+
+
+
+.summary {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    gap: 40px; /* Espaço entre as colunas */
+    justify-content: center; /* Centraliza as colunas de produtos */
+    text-align: center; /* Centraliza o texto dentro do container */
+    margin-bottom: 40px; /* Espaço entre as seções */
+}
+
+.summary h2 {
+    color: #FFA500; /* Título laranja */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.summary p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #b0b0b0; /* Texto claro */
+}
+
+
+#produtos .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+    gap: 40px; /* Espaço entre as colunas */
+    justify-content: center; /* Centraliza as colunas de produtos */
+    text-align: center; /* Centraliza o texto dentro do container */
+    margin-bottom: 40px; /* Espaço entre as seções */
+}
+
+#produtos h1 {
+    width: 100%; /* Faz o título ocupar toda a largura */
+    font-size: 2em;
+    color: #FFA500; /* Cor laranja */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+}
+
+#produtos .produto-item {
+    display: flex;
+    flex-direction: column; /* Organiza os itens de cada produto na vertical */
+    align-items: center; /* Centraliza os itens do produto */
+    flex-basis: 200px; /* Largura mínima para cada item */
+}
+
+#produtos h2 {
+    color: #FFA500; /* Cor laranja */
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+#produtos ul {
+    list-style: none; /* Remove os marcadores */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Itens da lista ficam empilhados verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+#produtos ul li {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Cor do texto */
+}
+
+#produtos .produto-item:last-child h2 {
+    white-space: nowrap; /* Impede que "Abóbora Japonesa" quebre linha */
+}
+
+#produtos .produto-item ul li::before {
+    content: "→"; /* Utiliza a seta simples (você pode mudar o tipo de seta) */
+    margin-right: 10px; /* Adiciona espaçamento entre a seta e o texto */
+    color: #FFA500; /* Cor laranja para a seta */
+    font-size: 1.5em; /* Ajuste o tamanho da seta */
+}
+
+#quem-somos h1 {
+    text-align: center; /* Centraliza o título */
+    color: #FFA500; /* Define a cor laranja */
+    font-size: 2.5em; /* Ajuste o tamanho da fonte se necessário */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#quem-somos .quem-somos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#quem-somos .quem-somos-texto {
+    max-width: 600px;
+}
+
+#valores .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Ajusta para telas menores */
+}
+
+.valores-item {
+    flex: 1;
+    background-color: #333;
+    padding: 30px 20px; /* Aumenta o espaçamento interno */
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    margin-bottom: 20px;
+}
+
+.valores-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra mais forte no hover */
+}
+
+.valores-item h2 {
+    color: #FFA500; /* Cor laranja */
+    font-size: 1.8em;
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    font-weight: bold;
+    text-align: center;
+}
+
+.valores-item ul {
+    list-style: none; /* Remove os marcadores */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza a lista verticalmente */
+    gap: 15px; /* Espaçamento entre os itens da lista */
+}
+
+.valores-item ul li {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre a seta e o texto */
+}
+
+.valores-item ul li::before {
+    content: "→"; /* Utiliza a seta simples */
+    margin-right: 10px; /* Espaçamento entre a seta e o texto */
+    color: #FFA500; /* Cor laranja para a seta */
+    font-size: 1.5em; /* Tamanho da seta */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .valores-item {
+        flex-basis: 100%;
+    }
+
+    .valores-item h2 {
+        font-size: 1.6em; /* Reduz o tamanho do título em telas pequenas */
+    }
+
+    .valores-item ul li {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte da lista */
+    }
+}
+
